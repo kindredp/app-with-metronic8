@@ -1,0 +1,20 @@
+<title><%= @page_title || content_for(:page_title) || (page_title rescue "Page Title") %></title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+<%= javascript_importmap_tags %>
+<%= javascript_include_tag 'https://kit.fontawesome.com/b415ad3545.js', crossorigin: 'anonymous' %>
+
+<%# Start Metronic8 Theme assets #%>
+<%= stylesheet_link_tag 'style.bundle.css', media: 'all'  %>
+<%= stylesheet_link_tag 'plugins.bundle.css', media: 'all'  %>
+<%= javascript_include_tag 'scripts.bundle.js' %>
+<%= javascript_include_tag 'plugins.bundle.js' %>
+<%= javascript_include_tag '/assets/plugins/custom/datatables/datatables.bundle.js'  %>
+<%= javascript_include_tag '/assets/plugins/custom/dropdown_content/dropdown_content.js'  %>
+<%= javascript_include_tag '/assets/plugins/custom/flatpickr/flatpickr.js' %>
+<%= javascript_include_tag '/assets/plugins/custom/inputmask/inputmask.js' %>
+<%= javascript_include_tag '/assets/plugins/custom/formrepeater/formrepeater.bundle.js' %>
+<%= stylesheet_link_tag '/assets/plugins/custom/datatables/datatables.bundle.css', media: 'all'  %>
+<%# End Metronic8 Theme assets %>
